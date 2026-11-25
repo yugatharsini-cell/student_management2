@@ -1,0 +1,286 @@
+/* Modal Overlay */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   Modal Content
+   ========================================================= */
+
+.modal-content {
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   Student Form Card
+   ========================================================= */
+
+.student-form-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   Form Header
+   ========================================================= */
+
+.form-card-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.form-card-header h3 {
+    color: #0f172a;
+
+    font-size: 20px;
+
+    margin: 0 0 5px;
+}
+
+.form-card-header p {
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   Close Button
+   ========================================================= */
+
+.close-form-button {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+.close-form-button:hover {
+    background: #e2e8f0;
+}
+
+/* =========================================================
+   Student Form
+   ========================================================= */
+
+.student-form {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   Form Groups
+   ========================================================= */
+
+.student-form .form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    min-width: 0;
+}
+
+.student-form .form-group label {
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   Form Inputs
+   ========================================================= */
+
+.student-form .form-group input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    color: #0f172a;
+
+    background: #ffffff;
+
+    font-size: 14px;
+}
+
+.student-form .form-group input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   Form Actions
+   ========================================================= */
+
+.form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 5px;
+}
+
+
+/* =========================================================
+   Form Buttons
+   ========================================================= */
+
+.cancel-button,
+.save-button {
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* Cancel Button */
+
+.cancel-button {
+    background: #f1f5f9;
+
+    color: #475569;
+}
+
+.cancel-button:hover {
+    background: #e2e8f0;
+}
+
+
+/* Save Button */
+
+.save-button {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.save-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Disabled Buttons */
+
+.cancel-button:disabled,
+.save-button:disabled,
+.close-form-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   Responsive Design
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .student-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        grid-column: auto;
+
+        justify-content: stretch;
+    }
+
+    .cancel-button,
+    .save-button {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .student-form-card {
+        padding: 18px;
+    }
+
+    .modal-overlay {
+        padding: 10px;
+    }
+
+    .modal-content {
+        max-height: 95vh;
+    }
+}

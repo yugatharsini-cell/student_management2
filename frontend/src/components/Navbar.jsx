@@ -9,10 +9,16 @@ function Navbar({ variant = "public", username, onLogout }) {
 
             <div className="navbar-container">
 
-                <Link to="/" className="logo">
-                            Student Management System
-                </Link>
+                            <Link to="/" className="logo">
 
+    <img
+        src="https://ucj.ac.lk/wp-content/uploads/2024/08/UCJ-logo.jpg"
+        alt="University college of jaffna"
+        className="university-logo"
+    />   
+
+</Link>
+                
 
                 {/* Public Navigation */}
                 {variant === "public" && (

@@ -15,8 +15,18 @@ function LoginInfo({ onBack }) {
             <div className="login-info-content">
 
                 <div className="login-logo">
-                    <GraduationCap size={60} />
+                                      
+
+    <img
+        src="https://ucj.ac.lk/wp-content/uploads/2024/08/UCJ-logo.jpg"
+        alt="University college of jaffna"
+        className="university-logo"
+    />   
+
+
+                    
                 </div>
+                
 
                 <h1>
                     Student Management System

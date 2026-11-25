@@ -34,7 +34,7 @@ function LandingPage() {
                         <div className="hero-content">
 
                             <span className="hero-badge">
-                                ABC Institute
+                               UCJ insititue
                             </span>
 
                             <h1>
